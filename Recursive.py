@@ -24,5 +24,10 @@ def perm(string: str, pocket=""):
             concat = front + back
             perm(concat, letter + pocket)
 
-print(perm("ABC"))
+# print(perm("ABC"))
+"""
+8 queens on a chess board with none targetting eachother
+"""
+
+
 
