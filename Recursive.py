@@ -29,5 +29,33 @@ def perm(string: str, pocket=""):
 8 queens on a chess board with none targetting eachother
 """
 
+class Fibi:
 
+    """
+    Fibinachi sequence with memoization
+    """
+    # basic
+    def fib(n):
+        if n<=2:
+            return 1
+        else: return fib(n-1) + fib(n+2)
+
+    """
+    Memoization
+    """
+    
+
+    def fib1(n, memo_dict = {}):
+        if n <= 2:
+            return 1
+
+        if n in memo_dict: 
+            return memo_dict[n]
+
+        else:
+            num = Fibi.fib1(n-1) + Fibi.fib1(n-2)
+            memo_dict[n] = num
+            return num
+
+print(Fibi.fib1(n = 200))
 
