@@ -38,7 +38,7 @@ class Fibi:
     def fib(n):
         if n<=2:
             return 1
-        else: return fib(n-1) + fib(n+2)
+        else: return Fibi.fib(n-1) + Fibi.fib(n+2)
 
     """
     Memoization
